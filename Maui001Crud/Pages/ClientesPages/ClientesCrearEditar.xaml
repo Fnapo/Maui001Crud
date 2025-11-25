@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Maui001Crud.Pages.ClientesPages.ClienteCrearEditar"
+             xmlns:cli="clr-namespace:Maui001Crud.Models.ClientesVistas"
+             Title="{Binding Titulo}">
+    <ContentPage.BindingContext>
+        <cli:ClienteCrearModelo />
+    </ContentPage.BindingContext>
+    <VerticalStackLayout Padding="15">
+        <Label 
+            Text= "{Binding Nombre}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <ActivityIndicator IsVisible="{Binding CargandoVisible}"
+            HeightRequest="50" IsRunning="{Binding CargandoVisible}" />
+        <Label Text="Nombre:"/>
+        <Entry Text="{Binding Nombre}" Margin="0, 0, 0, 10" />
+        <Label Text="Apellidos:"/>
+        <Entry Text="{Binding Apellidos}" Margin="0, 0, 0, 10" />
+        <Label Text="Email:"/>
+        <Entry Text="{Binding Email}" Margin="0, 0, 0, 10" />
+        <Label Text="Teléfono:"/>
+        <Entry Text="{Binding Telefono}" Margin="0, 0, 0, 10" />
+
+        <Button Text="Guardar"
+                Command="{Binding GuardarClienteCommand}" BackgroundColor="Green" />
+    </VerticalStackLayout>
+</ContentPage>
