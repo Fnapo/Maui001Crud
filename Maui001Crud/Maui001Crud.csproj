@@ -84,10 +84,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\..\..\..\Blazor\B007Crud\B007Clases\B007Clases.csproj" />
-	</ItemGroup>
-
-	<ItemGroup>
 	  <Compile Update="Pages\ClientesPages\ClientesCrearEditar.xaml.cs">
 	    <DependentUpon>ClientesCrearEditar.xaml</DependentUpon>
 	  </Compile>
