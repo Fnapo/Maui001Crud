@@ -1,8 +1,8 @@
 namespace Maui001Crud.Pages.ClientesPages;
 
-public partial class NewPage1 : ContentPage
+public partial class ClientesListar : ContentPage
 {
-	public NewPage1()
+	public ClientesListar()
 	{
 		InitializeComponent();
 	}

@@ -1,6 +1,8 @@
+using B007Clases.Models;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Maui001Crud.Models;
+using Maui001Crud.Pages.ClientesPages;
 
 namespace Maui001Crud.PageModels
 {
@@ -169,6 +171,14 @@ namespace Maui001Crud.PageModels
             OnPropertyChanged(nameof(HasCompletedTasks));
             Tasks = new(Tasks);
             await AppShell.DisplayToastAsync("All cleaned up!");
+        }
+        [RelayCommand]
+        private async Task ToCliente()
+        {
+            var uri = $"{nameof(ClientesListar)}";
+            //var uri = $"{nameof(ClienteCrearEditar)}?id=0";
+
+            await Shell.Current.GoToAsync(uri);
         }
     }
 }

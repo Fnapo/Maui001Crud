@@ -1,4 +1,3 @@
 {
-  "Cadena": "Server=(localdb)\\mssqllocaldb;Database=B007Crud;Trusted_Connection=True;MultipleActiveResultSets=true",
-  "Buena24": "Server=paco2024.zapto.org;Database=B007Crud;User Id=sa;Password=Mi_Clave2024;MultipleActiveResultSets=true"
+  "Cadena": "Server=(localdb)\\mssqllocaldb;Database=B007Crud;Trusted_Connection=True;MultipleActiveResultSets=true"
 }

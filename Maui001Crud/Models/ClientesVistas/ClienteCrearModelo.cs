@@ -15,7 +15,7 @@ namespace Maui001Crud.Models.ClientesVistas
 {
     public partial class ClienteCrearModelo : ObservableObject, IQueryAttributable
     {
-        private B007CrudContext? _contextoBD;
+        private B007CrudContext _contextoBD;
 
         [ObservableProperty]
         private long idCliente;
@@ -47,10 +47,11 @@ namespace Maui001Crud.Models.ClientesVistas
             _contextoBD = contextoBD;
         }
 
+        /*
         public ClienteCrearModelo()
         {
 
-        }
+        }*/
 
         public void ApplyQueryAttributes(IDictionary<string, object> query)
         {

@@ -3,9 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Maui001Crud.Pages.ClientesPages.ClienteCrearEditar"
              xmlns:cli="clr-namespace:Maui001Crud.Models.ClientesVistas"
+             xmlns:data="clr-namespace:B007Clases.Data;assembly=B007Clases"
+             x:DataType="cli:ClienteCrearModelo"
              Title="{Binding Titulo}">
     <ContentPage.BindingContext>
-        <cli:ClienteCrearModelo />
+        <cli:ClienteCrearModelo>
+            <x:Arguments>
+                <data:B007CrudContext />
+            </x:Arguments>
+        </cli:ClienteCrearModelo>
     </ContentPage.BindingContext>
     <VerticalStackLayout Padding="15">
         <Label 

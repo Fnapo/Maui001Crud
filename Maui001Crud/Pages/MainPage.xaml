@@ -31,7 +31,11 @@
             <toolkit:InvertedBoolConverter x:Key="InvertedBoolConverter" />
         </ResourceDictionary>
     </ContentPage.Resources>
-
+    <VerticalStackLayout>
+        <Button Text="Clientes"
+                Command="{Binding ToClienteCommand}" BackgroundColor="Blue"/>
+    </VerticalStackLayout>
+    <!--
     <Grid>
         <pullToRefresh:SfPullToRefresh
             IsRefreshing="{Binding IsRefreshing}"
@@ -86,4 +90,5 @@
             IsEnabled="{Binding IsBusy, Converter={StaticResource InvertedBoolConverter}}"
             Command="{Binding AddTaskCommand}" />
     </Grid>
+    -->
 </ContentPage>

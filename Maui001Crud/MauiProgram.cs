@@ -1,5 +1,7 @@
 ﻿using B007Clases.Data;
 using CommunityToolkit.Maui;
+using Maui001Crud.Models.ClientesVistas;
+using Maui001Crud.Pages.ClientesPages;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
@@ -57,10 +59,11 @@ namespace Maui001Crud
             builder.Services.AddSingleton<MainPageModel>();
             builder.Services.AddSingleton<ProjectListPageModel>();
             builder.Services.AddSingleton<ManageMetaPageModel>();
+            builder.Services.AddSingleton<ClienteListarModelo>();
 
             builder.Services.AddDbContext<B007CrudContext>(opciones => opciones.UseSqlServer(cadenaConexion));
 
-            builder.Services.AddTransientWithShellRoute<ProjectDetailPage, ProjectDetailPageModel>("project");
+            builder.Services.AddTransient<ProjectDetailPage, ProjectDetailPageModel>();
             builder.Services.AddTransientWithShellRoute<TaskDetailPage, TaskDetailPageModel>("task");
 
             return builder.Build();

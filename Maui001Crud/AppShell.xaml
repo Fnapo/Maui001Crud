@@ -8,6 +8,18 @@
     Shell.FlyoutBehavior="Flyout"
     Title="Maui001Crud">
 
+    <FlyoutItem>
+        <ShellContent
+        Title="Clientes"
+        Icon="{StaticResource IconClientes}"
+        ContentTemplate="{DataTemplate pages:ClientesPages.ClientesListar}"
+        Route="clientes" />
+        <ShellContent
+        Title="Crear Cliente"
+        Icon="{StaticResource IconCrearCliente}"
+        ContentTemplate="{DataTemplate pages:ClientesPages.ClienteCrearEditar}"
+        Route="crearcliente" />
+    </FlyoutItem>
     <ShellContent
         Title="Dashboard"
         Icon="{StaticResource IconDashboard}"
